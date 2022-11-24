@@ -1,0 +1,38 @@
+{
+  "name": "nuxt3-gtm",
+  "repository": {
+    "url": "https://github.com/tristanbenier/nuxt3-gtm"
+  },
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepack": "nuxt-module-build",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.0.0"
+  },
+  "devDependencies": {
+    "@nuxt/module-builder": "0.2.1",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@types/node": "^18.11.9",
+    "eslint": "8.28.0",
+    "nuxt": "^3.0.0",
+    "standard-version": "latest",
+    "typescript": "4.9.3"
+  }
+}
