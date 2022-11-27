@@ -3,8 +3,9 @@
     "@nuxtjs/eslint-config-typescript"
   ],
   "rules": {
-    "@typescript-eslint/no-unused-vars": [
-      "off"
-    ]
+    "@typescript-eslint/no-unused-vars": ["off"],
+    "@typescript-eslint/no-extra-semi": ["off"],
+    "semi": [2, "always"],
+    "comma-dangle": [2, "always-multiline"]
   }
 }

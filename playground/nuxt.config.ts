@@ -1,11 +1,17 @@
-import { defineNuxtConfig } from 'nuxt/config'
-import MyModule from '..'
+import { defineNuxtConfig } from 'nuxt/config';
+import GtmModule from '../src/module';
 
 export default defineNuxtConfig({
   modules: [
-    MyModule
+    [
+      GtmModule,
+      {
+        id: 'GTM-59BFMNT',
+        debug: true,
+      },
+    ],
   ],
-  myModule: {
-    addPlugin: true
-  }
-})
+  gtm: {
+    scriptHid: 'test',
+  },
+});
